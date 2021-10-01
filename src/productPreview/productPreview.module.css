@@ -1,15 +1,11 @@
-.productPreview
-{
+.productPreview{
   width: 100%;
   position: relative;
-
 }
 
-.productPreview > img 
-{
+.productPreview > img {
   width: 100%;
 }
-
 
 .TimeSection{
   position: absolute;
