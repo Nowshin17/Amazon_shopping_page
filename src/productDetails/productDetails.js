@@ -10,7 +10,8 @@ const ProductDetails = (props) => {
             classArr.push(classes.selectedProductImage);
         }
         return(
-            <img key= {pos} className={classArr.join(' ')} src={item.imageUrl} alt = {item.styleName} onClick= {() => props.onColorOptionClick(pos)}></img>
+            <img key= {pos} className={classArr.join(' ')} src={item.imageUrl} alt = 
+            {item.styleName} onClick= {() => props.onColorOptionClick(pos)}></img>
         );
     }
     )
@@ -21,11 +22,12 @@ const ProductDetails = (props) => {
         if(pos === props.currentSelectedFeature){
             classArr.push(classes.selectedFeatureItems);
         }
-        
         return(
             <button onClick={() => props.onFeatureItemClick(pos)} key={pos} className={classArr.join(' ')}> {item} </button>
         );
     })
+
+
     return(
     <div className = {classes.ProductData}>
         <h1 className = {classes.productTitle}> {props.data.title} </h1>
