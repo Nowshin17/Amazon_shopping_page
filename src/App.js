@@ -1,7 +1,7 @@
-// import logo from './logo.svg';
 import React,{Component} from 'react';
 import classes from './App.module.css';
 import ProductData from './Utils/ProductData';
+// importing Componrnts, there are three component
 import ProductDetails from './productDetails/productDetails';
 import ProductPreview from './productPreview/productPreview';
 import Topbar from './topbar/Topbar';
@@ -9,14 +9,15 @@ import Topbar from './topbar/Topbar';
 
 
 
+// created a class
 class App extends Component {
+
   // fatching the object from ProductData.js
   state = {
     productData: ProductData,
     currentPreviewImagePos: 0,
     currentSelectedFeature: 0,
   }
-
 
   onColorOptionClick = (pos) => {
     // const updatedPreviewImage = this.state.productData.colorOptions[pos].imageUrl
@@ -32,6 +33,8 @@ class App extends Component {
     this.setState({currentSelectedFeature: pos});
 
   }
+
+
   render(){
 
     return (
@@ -45,7 +48,7 @@ class App extends Component {
         </header>
          
        
-  
+      <body>
   
         <div className={classes.mainContainer}>
   
@@ -55,13 +58,30 @@ class App extends Component {
             </div>
   
             <div className = {classes.ProductData}>
-              <ProductDetails data = {this.state.productData} onColorOptionClick ={this.onColorOptionClick} currentPreviewImagePos={this.state.currentPreviewImagePos} onFeatureItemClick={this.onFeatureItemClick} currentSelectedFeature = {this.state.currentSelectedFeature} />
+              <ProductDetails data = {this.state.productData} onColorOptionClick ={this.onColorOptionClick} currentPreviewImagePos={this.state.currentPreviewImagePos} onFeatureItemClick=
+              {this.onFeatureItemClick} currentSelectedFeature = {this.state.currentSelectedFeature} />
             </div>
   
         </div>
   
   
-  
+
+      <div className={classes.imgb}>
+
+      <h2 className={classes.imgtext}>WE ARE HERE FOR YOU</h2>
+      <img src = "./img/1.jpg" alt = "img" ></img>
+
+      <h2 className={classes.imgtext}>Visit us</h2>
+      
+      <div className={classes.bottom}>
+      <h2 className={classes.imgtext}>WE ARE HERE FOR YOU</h2>
+      </div>
+        
+      </div>
+        
+        
+
+      </body>
       </div>
     );
 
